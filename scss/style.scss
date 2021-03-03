@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap');
+
+*,*::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.container{
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(https://img.shmbk.pl/rimgsph/2041_7fda796f-89e3-463a-ac29-9e719e92d890_max_900_1200_kuchnie-design-wnetrz-kuchnia-styl-nowoczesny.jpg);
+        opacity: 0%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        animation: bg-opacity 5s forwards 4.5s;
+    }
+    
+    .box{
+        margin: 0 2rem;
+        z-index: 100;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 60%;
+        max-width: 30rem;
+
+        p{
+            animation: subtitle-opacity 5s forwards 3s;
+            opacity: 0;
+            width: 80%;
+            font-size: 1.5rem;
+            color: rgb(162, 162, 238);
+        }
+
+        #logo{
+            display: block;
+            width: 100%;
+            animation: logo-fill 0.5s ease-in-out forwards 3.6s;
+
+            & path{
+
+                &:nth-child(1){
+                    stroke-dasharray: 860;
+                    stroke-dashoffset: 860;
+                    animation: logo-write 2s ease-in-out forwards ;
+                }
+                &:nth-child(2){
+                    stroke-dasharray: 627;
+                    stroke-dashoffset: 627;
+                    animation: logo-write 2s ease-in-out forwards 0.3s;
+                }
+                &:nth-child(3){
+                    stroke-dasharray: 646;
+                    stroke-dashoffset: 646;
+                    animation: logo-write 2s ease-in-out forwards 0.6s;
+                }
+                &:nth-child(4){
+                    stroke-dasharray: 371;
+                    stroke-dashoffset: 371;
+                    animation: logo-write 2s ease-in-out forwards 0.9s;
+                }
+                &:nth-child(5){
+                    stroke-dasharray: 598;
+                    stroke-dashoffset: 598;
+                    animation: logo-write 2s ease-in-out forwards 1.2s;
+                }
+                &:nth-child(6){
+                    stroke-dasharray: 552;
+                    stroke-dashoffset: 552;
+                    animation: logo-write 2s ease-in-out forwards 1.5s;
+                }
+                &:nth-child(7){
+                    stroke-dasharray: 557;
+                    stroke-dashoffset: 557;
+                    animation: logo-write 2s ease-in-out forwards 1.8s;
+                }
+            }
+        }
+        
+    }
+
+    @keyframes bg-opacity {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 0.3;
+        }
+        
+    }
+
+    @keyframes subtitle-opacity {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+        
+    }
+
+    @keyframes logo-write {
+        to{
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes logo-fill {
+        from{
+            fill: transparent;
+        }
+        to{
+            fill: #fff;
+        }
+    }
+}
+
+.container2{
+    height: 100vh;
+    width: 100%;
+    background-color: #ccc;
+}
